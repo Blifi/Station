@@ -13,10 +13,12 @@ SECRET_KEY = 'z7fpan7qjly+^c5mtxj5v(jxa4u3b#ayjfrcs*-fe%_q01j(il'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.160']
+#ALLOWED_HOSTS = ['192.168.1.160']
 #ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ['192.168.2.100']
 #ALLOWED_HOSTS = ['192.168.55.107']
+ALLOWED_HOSTS = ['http://blifi.pythonanywhere.com/']
+
 # Application definition
 
 INSTALLED_APPS = [
