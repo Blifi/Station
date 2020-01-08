@@ -1,0 +1,45 @@
+'X-CSRFToken':"cgy6BhBlJ8948KA6Quie2z9KMKVDa7suDphXaxn976Cme25OD89XsnTLPlnvcbza",
+
+
+{'csrfmiddlewaretoken': ['j26qUtwTJiwEr72oGNet5mq17Wuf8Vo8KbPhtJiH7gZWxpx6tr5cvaa2axW7aZvO'], 'eid': ['119'], 'ename': ['Anom'], 'eemail': ['kkk@amn.com'], 'econtact': ['15152325']}>
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['j26qUtwTJiwEr72oGNet5mq17Wuf8Vo8KbPhtJiH7gZWxpx6tr5cvaa2axW7aZvO'], 'eid': ['119'], 'ename': ['Anom'], 'eemail': ['kkk@amn.com'], 'econtact': ['15152325']}>
+
+
+
+'csrfmiddlewaretoken': ['XYfeVDGleeHFJWX318obHWcBct9S1sFio7Y5uTs9CcaXPesLOMfU7KWCf4BK3wMY']
+
+
+
+<QueryDict: {'csrfmiddlewaretoken': ['XYfeVDGleeHFJWX318obHWcBct9S1sFio7Y5uTs9CcaXPesLOMfU7KWCf4BK3wMY'], 'eid': ['121'], 'ename': ['aada'], 'eemail': ['asos@gg.com'], 'econtact': ['89888']}>
+
+{'csrfmiddlewaretoken': 'XYfeVDGleeHFJWX318obHWcBct9S1sFio7Y5uTs9CcaXPesLOMfU7KWCf4BK3wMY', 'eid': '220', 'ename': 'mariusz+Kol', 'eemail': 'mariusz%123.com', 'econtact': '%2B48656565'}
+
+
+
+
+
+
+-- Table: public.station
+
+-- DROP TABLE public.station;
+
+CREATE TABLE public.station
+(
+    id numeric NOT NULL,
+    "Date" date NOT NULL,
+    "Time" time without time zone NOT NULL,
+    "RTCTemp" numeric NOT NULL,
+    "Temp" numeric NOT NULL,
+    "Humidity" numeric NOT NULL,
+    "Pressure" numeric NOT NULL,
+    "PM2_5" numeric,
+    "PM10" numeric,
+    CONSTRAINT station_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.station
+    OWNER to pogoda;

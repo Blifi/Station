@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Station Data</title>  
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Nr </th>  
+        <th> RTC Temp </th>  
+        <th> Temperatura </th>  
+        <th> Wilgotność </th>  
+        <th> Ciśnienie </th> 
+		<th> Pyłki 2.5 </th>  
+        <th> Pyłki 10 </th>
+		<th> Data </th>  
+        <th> Czas </th> 		
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for station in station %}  
+    <tr>  
+        <td>{{ station.id }}</td>  
+        <td>{{ station.RTCTemp }}</td>  
+        <td>{{ station.Temp }}</td>  
+        <td>{{ station.Humidity }}</td>
+		<td>{{ station.Pressure }}</td>  
+        <td>{{ station.PM2_5 }}</td>  
+        <td>{{ station.PM10 }}</td>  
+        <td>{{ station.Date }}</td> 
+		<td>{{ station.Time }}</td> 
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+</body>  
+</html> 

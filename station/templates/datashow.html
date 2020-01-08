@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="UTF-8">  
+    <title>Station Data</title>  
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head> 
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body> 
+<h2>Station Data</h2>
+
+<table>
+  <tr>
+    <th>Data pomiaru</th>
+    <td>{{ station.Date }}</td>
+  </tr>
+  <tr>
+    <th>Godzina pomiaru</th>
+    <td>{{ station.Time }}</td>
+  </tr>
+  <tr>
+	<th>Temperatura [°C] </th>
+    <td>{{ station.Temp }}</td>
+  </tr>
+  <tr>
+    <th>Wilgotność [%] </th>
+    <td>{{ station.Humidity }}</td>
+  </tr>
+  <tr>
+    <th>Ciśnienie [hPa] </th>
+    <td>{{ station.Pressure }}</td>
+  </tr>
+  <tr>
+    <th>Stężenie pyłów [PM 2.5] </th>
+    <td>{{ station.PM2_5 }}</td>
+  </tr>
+  <tr>
+    <th>Stężenie pyłów [PM 10] </th>
+    <td>{{ station.PM10 }}</td>
+  </tr>
+</table>
+</body> 
+
+</html>
